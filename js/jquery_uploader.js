@@ -24,7 +24,7 @@ function sendRequest() {
     document.getElementById('progressNumber').innerHTML = "Upload: 0 % ";
     while (start < SIZE) {
 
-        var chunk = blob.slice(start, end);
+        var chunk = blob.webkitSlice(start, end);
         window.uploadfilearray[window.uploadcounter] = chunk;
         window.uploadcounter = window.uploadcounter + 1;
         start = end;
