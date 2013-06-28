@@ -59,7 +59,7 @@ function uploadFile(blobFile, filename) {
     xhr.addEventListener("error", uploadFailed, false);
     xhr.addEventListener("abort", uploadCanceled, false);
 
-    xhr.open("POST", "filesHandler?filename=" + filename, true);
+    xhr.open("POST", "/php/uploader.php?filename=" + filename, true);
     var uploadPercent = 0;
     xhr.upload.onprogress = function (e) {
         if (e.lengthComputable) {
